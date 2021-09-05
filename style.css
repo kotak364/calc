@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  background-color: #3a4764;
+  font-family: 'Spartan', sans-serif !important;
+}
+
+.container {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 100rem;
+  margin: 0 auto;
+}
+
+.container input {
+  width: 300px;
+  height: 70px;
+  border-radius: 5px;
+  margin: 15px 0px;
+  border: none;
+  background-color: #232c43;
+}
+
+.container input[type="number"] {
+  color: white;
+  font-size: 2rem;
+  padding: 0px 10px;
+}
+
+.container ::-webkit-input-placeholder {
+  color: white;
+  opacity: 0.3;
+}
+
+.container :-ms-input-placeholder {
+  color: white;
+  opacity: 0.3;
+}
+
+.container ::-ms-input-placeholder {
+  color: white;
+  opacity: 0.3;
+}
+
+.container ::placeholder {
+  color: white;
+  opacity: 0.3;
+}
+
+.container .calc_btn_container {
+  background-color: #18203485;
+  width: 300px;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.container .calc_btn_container_1 {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 1.5rem;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+}
+
+.container .cl_2 {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 1.5rem;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+.container .btn {
+  font-size: 2rem;
+  border-radius: 5px;
+  border: none;
+  padding: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.container .btn_design_1 {
+  background-color: #eae3dc;
+  color: #444b5a;
+  -webkit-box-shadow: 0px 3px #b4a597;
+          box-shadow: 0px 3px #b4a597;
+}
+
+.container .btn_design_2 {
+  background-color: #637097;
+  color: white;
+  text-transform: uppercase;
+  -webkit-box-shadow: 0px 3px #404e72;
+          box-shadow: 0px 3px #404e72;
+}
+
+.container .btn_design_3 {
+  background-color: #d03f2f;
+  color: white;
+  -webkit-box-shadow: 0px 3px #93261a;
+          box-shadow: 0px 3px #93261a;
+}
+
+.container .calc_btn_container .calc_btn_container_1:not(:last-child) .btn {
+  margin-bottom: 0.7em;
+}
+/*# sourceMappingURL=style.css.map */

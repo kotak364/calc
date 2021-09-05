@@ -1,0 +1,140 @@
+//google font
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
+
+//css variable creation in scss.
+
+$Very-dark-desaturated-blue1: hsl(222, 26%, 31%);
+$Very-dark-desaturated-blue2: hsl(223, 31%, 20%);
+$Very-dark-desaturated-blue3:#18203485;
+
+//keys
+$Desaturated-dark-blue1: hsl(225, 21%, 49%);
+$Desaturated-dark-blue2: hsl(224, 28%, 35%); //shadow
+
+$Red: hsl(6, 63%, 50%);
+$Dark-red: hsl(6, 70%, 34%); //shadow
+
+$Light-grayish-orange: hsl(30, 25%, 89%);
+$Grayish-orange: hsl(28, 16%, 65%); //shadow
+
+//text
+$Very-dark-grayish-blue: hsl(221, 14%, 31%);
+$White: hsl(0, 0, 100%);
+
+//css reset
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+//common part
+
+html {
+  font-size: 10px;
+}
+
+body {
+  background-color: $Very-dark-desaturated-blue1;
+  font-family: 'Spartan', sans-serif !important;
+
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 100rem;
+  margin: 0 auto;
+}
+
+//mixin in css
+@mixin grid {
+  display: grid;
+  grid-gap: 1.5rem;
+}
+
+@mixin btn {
+  font-size: 2rem;
+  border-radius: 5px;
+  border: none;
+  padding: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+@mixin btn-design-1 {
+  background-color: $Light-grayish-orange;
+  color: $Very-dark-grayish-blue;
+  box-shadow: 0px 3px $Grayish-orange;
+}
+@mixin btn-design-2 {
+  background-color: $Desaturated-dark-blue1;
+  color: $White;
+  text-transform: uppercase;
+  box-shadow: 0px 3px $Desaturated-dark-blue2;
+}
+@mixin btn-design-3 {
+  background-color: $Red;
+  color: $White;
+  box-shadow: 0px 3px $Dark-red;
+}
+
+//common part end
+
+
+
+//nesting we used
+.container {
+  input {
+    width: 300px;
+    height: 70px;
+    border-radius: 5px;
+    margin: 15px 0px;
+    border: none;
+    background-color: $Very-dark-desaturated-blue2;
+  }
+
+  input[type="number"] {
+    color: $White;
+    font-size: 2rem;
+    padding: 0px 10px;
+  }
+  ::placeholder {
+    color: $White;
+    opacity: 0.3;
+  }
+
+  .calc_btn_container {
+    background-color: $Very-dark-desaturated-blue3;
+    width: 300px;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  .calc_btn_container_1 {
+    @include grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .cl_2 {
+    @include grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .btn {
+    @include btn;
+  }
+  .btn_design_1 {
+    @include btn-design-1;
+  }
+  .btn_design_2 {
+    @include btn-design-2;
+  }
+  .btn_design_3 {
+    @include btn-design-3;
+  }
+  .calc_btn_container .calc_btn_container_1:not(:last-child) .btn {
+    margin-bottom: 0.7em;
+  }
+}
